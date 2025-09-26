@@ -1,0 +1,43 @@
+<div class="container">
+  <h3>予定の新規追加</h3>
+
+  <%= render "shared/error", obj: @schedule %>
+
+  <div class="contents">
+    <%= form_with model: @schedule do |f| %>
+      <ul class="title-field">
+        <li><%= f.label :title ,"タイトル" %></li>
+        <li><%= f.text_field :title %></li>
+      </ul>
+
+      <div class="date-field-box">
+        <div class="date-field">
+          <%= f.label :start_date ,"開始日" %><br>
+          <%= f.date_field :start_date %>
+        </div>
+        <div class="date-field">
+          <%= f.label :end_date ,"終了日" %><br>
+          <%= f.date_field :end_date %>
+        </div>
+      </div>
+
+      <div class="check-box">
+        <%= f.check_box :all_day %>
+        <%= f.label :all_day ,"終日の場合チェックしてください" %>
+      </div>
+
+      <ul class="remark-area">
+        <li><%= f.label :remark ,"スケジュールメモ" %></li>
+        <li><%= f.text_area :remark %></li>
+      </ul>
+
+      <div class="button-box">
+        <%= link_to :schedules do %>
+          <button class="cancel-btn">キャンセル</button>
+        <% end %>
+
+        <%= f.submit "保存", class: "edit-btn" %>
+      </div>
+    <%end %>
+  </div>
+</div>

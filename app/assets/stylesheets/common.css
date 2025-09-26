@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  background-color: #f6f6f6;
+}
+
+h2 {
+  width: 100%;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+  background-color: #f79214;
+  color: #ffff;
+  position: relative;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h3 {
+  display: inline-block;
+}
+
+.edit-btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #bcdfff;
+  color: #0067c0;
+  border: solid 1px #0067c0;
+}
+
+.contents {
+  background-color: #ffff;
+  box-shadow: 0 5px 5px -5px #808080;
+}
+
+.flashbox {
+  width: 300px;
+  text-align: center;
+}
+
+.notice {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #bcdfff;
+  color: #0067c0;
+  border: solid 1px #0067c0;
+}
+
+.alert {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffd4d1;
+  color: #930403;
+  border: solid 1px #930403;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+table th {
+  text-align: left;
+  padding: 15px 20px;
+  border-bottom: solid 3px #f6f6f6;
+}
+
+table td {
+  padding: 15px 20px;
+  border-bottom: solid 3px #f6f6f6;
+}
+
+.title-field {
+  padding: 20px;
+  list-style: none;
+}
+
+.date-field-box {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-field {
+  width: 400px;
+}
+
+.check-box {
+  padding: 20px;
+}
+
+.remark-area {
+  padding: 20px;
+  list-style: none;
+}
+
+.button-box {
+  padding: 20px;
+  text-align: right;
+}
+
+.cancel-btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #ffff;
+}
+
+.detail-coteiner {
+  padding: 20px;
+  background-color: #ffff;
+  box-shadow: 0 5px 5px -5px #808080;
+}
+
+.detailed-list {
+  width: 860px;
+  border: solid 3px #f6f6f6;
+}
+
+.detailed-list th {
+  width: 135px;
+  background-color: #f7f9fc;
+  border: solid 3px #f6f6f6;
+}
