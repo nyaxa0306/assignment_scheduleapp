@@ -1,6 +1,8 @@
 class SchedulesController < ApplicationController
   def index
     @schedules = Schedule.all
+    @schedule_total = Schedule.count
+    @today = Date.current
   end
 
   def new
@@ -13,6 +15,7 @@ class SchedulesController < ApplicationController
       flash[:notice] = "スケジュールを登録しました"
       redirect_to :schedules
     else
+      flash.now[:alert] = "登録に失敗しました"
       render "new", status: :unprocessable_entity
     end
   end
@@ -31,6 +34,7 @@ class SchedulesController < ApplicationController
       flash[:notice] = "スケジュールを更新しました"
       redirect_to :schedules
     else
+      flash.now[:alert] = "更新に失敗しました"
       render "edit", status: :unprocessable_entity
     end
   end

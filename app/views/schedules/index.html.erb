@@ -30,13 +30,18 @@
       </thead>
 
       <tbody>
-        <%= @schedules.each do |schedule| %>
+        <% @schedules.each do |schedule| %>
           <tr>
             <td><%= schedule.id %></td>
             <td><%= schedule.title %></td>
-            <td><%= schedule.start_date %></td>
-            <td><%= schedule.end_date %></td>
-            <td><%= schedule.all_day %></td>
+            <td><%= l schedule.start_date %></td>
+            <td><%= l schedule.end_date %></td>
+            <td>
+              <% if schedule.all_day == true %>
+                〇
+              <% else %>
+              <% end %>
+            </td>
             <td><%= schedule.updated_at.to_fs(:datatime_jp) %></td>
             <td>
               <%= link_to "詳細", schedule %>
@@ -45,12 +50,16 @@
               <%= link_to "編集", [:edit, schedule] %>
             </td>
             <td>
-              <%= link_to "削除", schedule, data: { turbo_method: :delete, turbo_confirm:"「」を削除しますか？"} %>
+              <%= link_to "削除", schedule, data: { turbo_method: :delete, turbo_confirm:"「#{schedule.title}」を削除しますか？"} %>
             </td>
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
-</div>
 
+  <div class="index-status">
+    <p>予定件数 <%= @schedule_total %> 件</p>
+    <p>本日の日付 <%= l @today %> </p>
+  </div>
+</div>

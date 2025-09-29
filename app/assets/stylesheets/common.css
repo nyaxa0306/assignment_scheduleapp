@@ -1,3 +1,7 @@
+* {
+  font-family: sans-serif;
+}
+
 body {
   margin: 0;
   background-color: #f6f6f6;
@@ -24,10 +28,6 @@ h2 {
   align-items: center;
 }
 
-h3 {
-  display: inline-block;
-}
-
 .edit-btn {
   padding: 10px 20px;
   font-size: 15px;
@@ -42,8 +42,23 @@ h3 {
   box-shadow: 0 5px 5px -5px #808080;
 }
 
+.index-status {
+  margin-top: 50px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffff;
+  box-shadow: 0 5px 5px -5px #808080;
+}
+
 .flashbox {
   width: 300px;
+  text-align: center;
+}
+
+.alertbox {
+  width: 300px;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -79,9 +94,18 @@ table td {
   border-bottom: solid 3px #f6f6f6;
 }
 
+.validate-text {
+  font-size: 10px;
+}
+
 .title-field {
   padding: 20px;
   list-style: none;
+}
+
+.text-field {
+  width: 840px;
+  padding: 10px;
 }
 
 .date-field-box {
@@ -101,6 +125,12 @@ table td {
 .remark-area {
   padding: 20px;
   list-style: none;
+}
+
+.text-area {
+  width: 840px;
+  height: px;
+  padding: 10px;
 }
 
 .button-box {

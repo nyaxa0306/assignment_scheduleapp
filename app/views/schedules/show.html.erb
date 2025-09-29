@@ -3,7 +3,7 @@
   <div class="page-title">
     <h3><%= @schedule.title %></h3>
     <%= link_to [:edit_schedule] do %>
-      <button>編集</button>
+      <button class="edit-btn">編集</button>
     <% end %>
   </div>
 
@@ -11,15 +11,20 @@
     <table class="detailed-list">
       <tr>
         <th>開始日</th>
-        <td><%= @schedule.start_date %></td>
+        <td><%= l @schedule.start_date %></td>
       </tr>
       <tr>
         <th>終了日</th>
-        <td><%= @schedule.end_date %></td>
+        <td><%= l @schedule.end_date %></td>
       </tr>
       <tr>
         <th>終日</th>
-        <td><%= @schedule.all_day %></td>
+        <td>
+          <% if @schedule.all_day == true %>
+            〇
+          <% else %>
+          <% end %>
+        </td>
       </tr>
       <tr>
         <th>スケジュールメモ</th>
