@@ -23,6 +23,7 @@ h2 {
 }
 
 .page-title {
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,6 +63,16 @@ h2 {
   text-align: center;
 }
 
+.error-message {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffd4d1;
+  color: #930403;
+  border: solid 1px #930403;
+}
+
 .notice {
   padding: 10px;
   border-radius: 10px;
@@ -94,11 +105,14 @@ table td {
   border-bottom: solid 3px #f6f6f6;
 }
 
-.validate-text {
-  font-size: 10px;
+.required-field::after {
+  color: #dc143c;
+  font-weight: bold;
+  content: " *";
 }
 
 .title-field {
+  margin: 0;
   padding: 20px;
   list-style: none;
 }
